@@ -25,8 +25,7 @@ var builder = Host.CreateDefaultBuilder().ConfigureServices(services =>
     services.AddSingleton<MainScreen>();
 
     services.AddSingleton<Navigator>();
-    services.AddSingleton<UpdateDataScreen>();
-    services.AddSingleton<RegisterCostomerUI>();
+    services.AddSingleton<RegisterCustomerUI>();
 }).Build();
 
 var mainUI = builder.Services.GetRequiredService<MainScreen>();
