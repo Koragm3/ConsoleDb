@@ -10,7 +10,7 @@ namespace ConsoleDb.UI.Navigation
     {
         public void NatigateTo(IUserInterface newUi)
         {
-            
+            Console.Clear();
             newUi.Render();
         }
     }

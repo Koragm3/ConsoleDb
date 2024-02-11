@@ -23,9 +23,11 @@ var builder = Host.CreateDefaultBuilder().ConfigureServices(services =>
     services.AddScoped<RoleService>();
     services.AddScoped<CustomerService>();
     services.AddSingleton<MainScreen>();
-
+    services.AddSingleton<ManageCustomersScreen>();
+    services.AddSingleton<ManageProductScreen>();
     services.AddSingleton<Navigator>();
     services.AddSingleton<RegisterCustomerUI>();
+
 }).Build();
 
 var mainUI = builder.Services.GetRequiredService<MainScreen>();
