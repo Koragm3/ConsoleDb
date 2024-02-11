@@ -48,6 +48,7 @@ namespace ConsoleDb.UI
 
         }
 
+
         public void UpdateCustomers()
         {
             Console.WriteLine("Enter customers ID:");
@@ -180,6 +181,16 @@ namespace ConsoleDb.UI
                 Console.WriteLine("product was not found");
             }
 
+        }
+        public void ShowAllProducts()
+        {
+           var products = _productService.GetAllProducts();
+            Console.Clear();
+            foreach (var product in products)
+            {
+                Console.WriteLine(product.Title);
+            }
+            Console.ReadKey();
         }
     }
 }

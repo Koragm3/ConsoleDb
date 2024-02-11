@@ -20,12 +20,13 @@ namespace ConsoleDb.UI
         }
         public void Render()
         {
-            Console.WriteLine("Welcome to the Internet store 2024");
-            Console.WriteLine("1. register a customer");
-            Console.WriteLine("2. manage customers");
-            Console.WriteLine("3. manage products");
+            
             while (true)
             {
+                Console.WriteLine("Welcome to the Internet store 2024");
+                Console.WriteLine("1. register a customer");
+                Console.WriteLine("2. manage customers");
+                Console.WriteLine("3. manage products");
                 try
                 {
                     var input = Convert.ToInt32(Console.ReadLine());
@@ -49,6 +50,7 @@ namespace ConsoleDb.UI
                                 case 1:
                                     Console.Clear();
                                     _registerCustomerUI.UpdateCustomers();
+                                    Console.ReadKey();
                                     break;
 
                                 case 2:
@@ -71,6 +73,7 @@ namespace ConsoleDb.UI
                             Console.WriteLine("1_Create a New Product");
                             Console.WriteLine("2_Update Products Info");
                             Console.WriteLine("3_Delete a Product");
+                            Console.WriteLine("4_Show all Products");
                             var ii = Convert.ToInt32(Console.ReadLine());
                             switch (ii)
                             {
@@ -85,6 +88,10 @@ namespace ConsoleDb.UI
                                 case 3:
                                     Console.Clear();
                                     _registerCustomerUI.DeleteProductById();
+                                    break;
+                                case 4: 
+                                    Console.Clear();
+                                    _registerCustomerUI.ShowAllProducts();
                                     break;
                             }
                             
